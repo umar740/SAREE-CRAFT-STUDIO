@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  background: #FBF7EF;
+  color: #2B2420;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: 'Fraunces', serif;
+  letter-spacing: -0.01em;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #E8D9AE;
+}
+
+/* Before/After slider */
+.ba-slider {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: ew-resize;
+  user-select: none;
+  touch-action: none;
+}
+.ba-slider .ba-layer {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+.ba-slider .ba-after {
+  clip-path: inset(0 0 0 50%);
+}
+.ba-slider .ba-divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 3px;
+  background: #B8923F;
+  transform: translateX(-1.5px);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+}
+.ba-slider .ba-handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #B8923F;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  border: 3px solid #FBF7EF;
+}
+
+/* Line clamp utility (no plugin needed) */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Shared form input styling */
+.input {
+  width: 100%;
+  padding: 0.72rem 0.9rem;
+  border-radius: 10px;
+  border: 1px solid #E3D9C4;
+  background: #FBF7EF;
+  color: #2B2420;
+  font-family: 'Manrope', sans-serif;
+  font-size: 14.5px;
+}
+.input:focus {
+  outline: 2px solid #B8923F;
+  outline-offset: 1px;
+}
